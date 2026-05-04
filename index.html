@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dastan & Madina | Wedding Invitation</title>
+    <!-- Google Fonts: Cormorant Garamond, Montserrat, and Pinyon Script for initials -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <button onclick="setLanguage('kk')" id="lang-kk" class="active">KZ</button>
+        <button onclick="setLanguage('ru')" id="lang-ru">RU</button>
+    </div>
+
+    <!-- Floating Audio Button -->
+    <button id="music-btn" class="music-btn" aria-label="Toggle Music">
+        <div class="music-icon-wrapper">
+            <span id="music-icon">🎵</span>
+        </div>
+        <span id="music-text" data-key="audio_play">Әуен</span>
+    </button>
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио элемент.
+    </audio>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-container container">
+            <div class="hero-left reveal">
+                <div class="arch-wrapper">
+                    <!-- Curved Text SVG circling the top-right -->
+                    <svg class="curved-text" viewBox="0 0 350 350" width="350" height="350">
+                        <path id="arch-curve" d="M 175,25 A 150,150 0 0,1 325,175" fill="transparent" />
+                        <text>
+                            <textPath href="#arch-curve" startOffset="50%" text-anchor="middle" class="save-date-text">
+                                S A V E   T H E   D A T E
+                            </textPath>
+                        </text>
+                    </svg>
+
+                    <!-- Arch photo frame -->
+                    <div class="arch-frame">
+                        <div class="arch-photo">
+                            <img src="romantic_photo.png" alt="Wedding Couple">
+                        </div>
+                    </div>
+
+                    <!-- Flowers ON TOP of arch: upper-left and lower-right corners -->
+                    <img src="floral_crown.png?v=3" class="arch-flowers arch-flowers-top" alt="Flowers">
+                    <img src="floral_top.png?v=3" class="arch-flowers arch-flowers-bottom" alt="Flowers">
+                </div>
+            </div>
+            
+            <div class="hero-right reveal">
+                <div class="hero-titles">
+                    <div class="initials">DM</div>
+                    <h2 class="hero-names serif">Dastan & Madina</h2>
+                    
+                    <div class="hero-divider">
+                        <span class="line"></span>
+                        <span class="ornament">❖</span>
+                        <span class="line"></span>
+                    </div>
+                    
+                    <p class="date">08 / 08 / 2026</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Invitation Section -->
+    <section class="section invitation-section">
+        <div class="container reveal">
+            <p class="pre-title" data-key="invitation_pre">Ағайын-туыс, бауырлар, құда-жекжат, нағашылар, дос-жарандар, көршілер және әріптестер!</p>
+            
+            <div class="ornament-divider reveal">
+                <svg viewBox="0 0 400 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 0,25 Q 100,25 200,5 T 400,25" stroke="url(#goldGrad)" stroke-width="1.5" fill="none"/>
+                    <path d="M 0,25 Q 100,25 200,45 T 400,25" stroke="url(#goldGrad)" stroke-width="1.5" fill="none"/>
+                    <circle cx="200" cy="25" r="8" fill="url(#goldGrad)" />
+                    <circle cx="100" cy="25" r="3" fill="url(#goldGrad)" />
+                    <circle cx="300" cy="25" r="3" fill="url(#goldGrad)" />
+                    <defs>
+                        <linearGradient id="goldGrad" x1="0" y1="25" x2="400" y2="25" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#C5A059" stop-opacity="0" />
+                            <stop offset="0.5" stop-color="#C5A059" />
+                            <stop offset="1" stop-color="#C5A059" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            
+            <h2 class="serif" data-key="invitation_title">Құрметті қонақтар!</h2>
+            <p class="main-text" data-key="invitation_main">Сіздерді Балаларымыздың үйлену тойына арналған салтанатты ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!</p>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section class="section calendar-section">
+        <div class="container reveal">
+            <h3 class="serif calendar-title" data-key="calendar_title">Тамыз 2026</h3>
+            <div class="calendar-wrapper">
+                <div class="calendar-header">
+                    <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span class="weekend">Сб</span><span class="weekend">Вс</span>
+                </div>
+                <div class="calendar-grid">
+                    <span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span>
+                    <span class="weekend">1</span><span class="weekend">2</span>
+                    <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span class="wedding-day">8</span><span>9</span>
+                    <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
+                    <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
+                    <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+                    <span>31</span>
+                </div>
+            </div>
+            <div class="calendar-note" data-key="calendar_note">Бұл күнді күнтізбеге белгілеп қойыңыздар!</div>
+        </div>
+    </section>
+
+    <!-- Location & Dress Code -->
+    <section class="section details-section">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Location -->
+                <div class="detail-card reveal">
+                    <div class="icon">📍</div>
+                    <h3 class="serif" data-key="location_title">Мекен-жайымыз</h3>
+                    <p><strong>Palazzo Di Astana</strong></p>
+                    <p data-key="location_address">ул. Сыганак, 38, Астана</p>
+                    <a href="https://2gis.kz/astana/firm/70000001037597148" target="_blank" class="btn btn-outline" data-key="btn_map">Картадан ашу</a>
+                </div>
+                <!-- Dress Code (interactive) -->
+                <div class="detail-card detail-card-dresscode reveal">
+                    <h3 class="serif" data-key="dresscode_title">Дресс-Код</h3>
+
+                    <!-- Color palette -->
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background:#D6CCBC;" title="Бежевый"></div>
+                        <div class="color-swatch" style="background:#B08070;" title="Терракота"></div>
+                        <div class="color-swatch" style="background:#5E3A2C;" title="Шоколад"></div>
+                        <div class="color-swatch" style="background:#8A9E7A;" title="Шалфей"></div>
+                    </div>
+
+                    <!-- SVG sketch: suit + dress -->
+                    <svg id="dresscode-svg" class="dresscode-svg" viewBox="0 0 400 360" width="100%">
+                        <!-- FILLS (change color on swatch click) -->
+                        <g fill="transparent" stroke="none">
+                            <path class="dresscode-fill" d="M 115 85 L 70 110 L 90 145 L 85 230 L 120 250 L 120 165 Z" />
+                            <path class="dresscode-fill" d="M 70 110 L 60 210 L 75 210 L 90 145 Z" />
+                            <path class="dresscode-fill" d="M 125 85 L 170 110 L 150 145 L 155 230 L 120 250 L 120 165 Z" />
+                            <path class="dresscode-fill" d="M 170 110 L 180 210 L 165 210 L 150 145 Z" />
+                            <path class="dresscode-fill" d="M 262 115 Q 275 120 280 125 Q 285 120 298 115 C 305 130, 300 145, 292 160 Q 280 165 268 160 C 260 145, 255 130, 262 115 Z" />
+                            <path class="dresscode-fill" d="M 268 160 Q 280 165 292 160 Q 330 250 350 330 Q 338 335 325 325 Q 305 340 280 340 Q 255 340 235 325 Q 222 335 210 330 Q 230 250 268 160 Z" />
+                        </g>
+                        <!-- STROKES (outlines) -->
+                        <g fill="none" class="dresscode-stroke" stroke="#2b2827" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+                            <!-- SUIT (left) -->
+                            <rect x="116" y="70" width="8" height="15" />
+                            <line x1="120" y1="85" x2="120" y2="330" />
+                            <ellipse cx="120" cy="330" rx="38" ry="8" />
+                            <line x1="90" y1="270" x2="150" y2="330" />
+                            <line x1="150" y1="270" x2="90" y2="330" />
+                            <line x1="115" y1="85" x2="70" y2="110" />
+                            <line x1="70" y1="110" x2="60" y2="210" />
+                            <line x1="60" y1="210" x2="75" y2="210" />
+                            <line x1="75" y1="210" x2="90" y2="145" />
+                            <line x1="125" y1="85" x2="170" y2="110" />
+                            <line x1="170" y1="110" x2="180" y2="210" />
+                            <line x1="180" y1="210" x2="165" y2="210" />
+                            <line x1="165" y1="210" x2="150" y2="145" />
+                            <line x1="90" y1="145" x2="85" y2="230" />
+                            <line x1="85" y1="230" x2="120" y2="250" />
+                            <line x1="150" y1="145" x2="155" y2="230" />
+                            <line x1="155" y1="230" x2="120" y2="250" />
+                            <line x1="120" y1="250" x2="120" y2="165" />
+                            <polygon points="115,85 75,118 100,125 80,135 120,165" fill="none" />
+                            <polygon points="125,85 165,118 140,125 160,135 120,165" fill="none" />
+                            <line x1="118" y1="200" x2="88" y2="195" />
+                            <line x1="122" y1="200" x2="152" y2="195" />
+                            <polygon points="116,95 124,95 122,105 118,105" />
+                            <polygon points="118,105 122,105 126,140 120,150 114,140" />
+                            <line x1="115" y1="85" x2="116" y2="95" />
+                            <line x1="125" y1="85" x2="124" y2="95" />
+                            <line x1="110" y1="92" x2="116" y2="95" />
+                            <line x1="130" y1="92" x2="124" y2="95" />
+                            <circle cx="120" cy="165" r="2.5" fill="#2b2827" stroke="none" />
+                            <!-- DRESS (right) -->
+                            <path d="M 280 80 L 280 75 C 280 50, 300 50, 290 40 C 285 35, 275 40, 275 45" />
+                            <polygon points="280,80 250,95 252,100 280,86 308,100 310,95" />
+                            <line x1="262" y1="92" x2="265" y2="115" />
+                            <line x1="298" y1="92" x2="295" y2="115" />
+                            <path d="M 262 115 Q 275 120 280 125 Q 285 120 298 115" />
+                            <path d="M 262 115 C 255 130, 260 145, 268 160" />
+                            <path d="M 298 115 C 305 130, 300 145, 292 160" />
+                            <path d="M 268 160 Q 280 165 292 160" />
+                            <path d="M 268 160 Q 230 250 210 330" />
+                            <path d="M 292 160 Q 330 250 350 330" />
+                            <path d="M 210 330 Q 222 335 235 325 Q 255 340 280 340 Q 305 340 325 325 Q 338 335 350 330" />
+                            <path d="M 276 162 Q 255 250 235 325" />
+                            <path d="M 284 162 Q 305 250 325 325" />
+                        </g>
+                    </svg>
+
+                    <p class="dress-note" data-key="dress_note">Біз сіздерді дәл өздеріңіздей әдемі кешкі образда күтеміз!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline / Program -->
+    <section class="section timeline-section">
+        <div class="container">
+            <h2 class="serif reveal" data-key="timeline_title">Той бағдарламасы</h2>
+            <div class="timeline reveal">
+                <div class="timeline-item">
+                    <div class="time">15:30</div>
+                    <div class="event" data-key="event_gathering">Қонақтардың жиналуы</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">16:00</div>
+                    <div class="event" data-key="event_betashar">Беташар</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">16:30</div>
+                    <div class="event" data-key="event_photos">Фотосессия</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">17:00</div>
+                    <div class="event" data-key="event_start">Тойдың басталуы</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">21:00</div>
+                    <div class="event" data-key="event_cake">Торт</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">22:00</div>
+                    <div class="event" data-key="event_dance">Билер</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="section timer-section">
+        <div class="container">
+            <h2 class="serif reveal" data-key="timer_title">Тойға дейін қалды</h2>
+            <div id="countdown" class="countdown reveal">
+                <div class="timer-block">
+                    <span id="days">00</span>
+                    <p data-key="unit_days">Күн</p>
+                </div>
+                <div class="timer-block">
+                    <span id="hours">00</span>
+                    <p data-key="unit_hours">Сағат</p>
+                </div>
+                <div class="timer-block">
+                    <span id="minutes">00</span>
+                    <p data-key="unit_minutes">Минут</p>
+                </div>
+                <div class="timer-block">
+                    <span id="seconds">00</span>
+                    <p data-key="unit_seconds">Секунд</p>
+                </div>
+            </div>
+            <div id="timer-ended" class="timer-ended hidden" data-key="timer_ended">Той басталды!</div>
+        </div>
+    </section>
+
+    <!-- RSVP Form -->
+    <section class="section rsvp-section">
+        <div class="container">
+            <div class="rsvp-card reveal">
+                <h2 class="serif" data-key="rsvp_title">Қатысуды растау</h2>
+                <p class="rsvp-note" data-key="rsvp_subtitle">Өтінемін, 20.03.2025 дейін жауап беріңіз.</p>
+                
+                <form id="rsvp-form">
+                    <div class="input-group">
+                        <input type="text" name="name" id="user-name" required placeholder=" ">
+                        <label for="user-name" data-key="label_name">Аты-жөніңіз</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="group-label" data-key="label_attendance">Тойға келесіз бе?</label>
+                        <div class="radio-options">
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="Attending" required>
+                                <span class="custom-radio"></span>
+                                <span data-key="opt_yes">Қуана қатысамын</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="With Plus One">
+                                <span class="custom-radio"></span>
+                                <span data-key="opt_plus">Жұбыммен келемін</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="Not Attending">
+                                <span class="custom-radio"></span>
+                                <span data-key="opt_no">Қатыса алмаймын</span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" id="submit-btn" class="btn btn-full">
+                        <span id="btn-text" data-key="btn_submit">Жіберу</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hosts Section -->
+    <section class="section hosts-section">
+        <div class="container reveal">
+            <h3 class="serif" data-key="hosts_label">Той иелері:</h3>
+            <p class="hosts-names">Аслан & Алия</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Dastan & Madina</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
